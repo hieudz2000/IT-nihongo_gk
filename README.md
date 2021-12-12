@@ -1,24 +1,25 @@
-# README
+## Food Travels
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Introduction
 
-Things you may want to cover:
+Web app where users can connect to share their food travel stories and get recommendations from other users about food specialities in a particular destination.
 
-* Ruby version
+### Usage
 
-* System dependencies
+```
+$ bundle install --without production
+```
 
-* Configuration
+Next, migrate the database:
 
-* Database creation
+```
+$ rails db:migrate
+```
 
-* Database initialization
+Finally, run the test suite to verify that everything is working correctly:
 
-* How to run the test suite
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+$ rails server
+```
 
-* Deployment instructions
-
-* ...
