@@ -24,8 +24,9 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
+    
     @category = Category.new(category_params)
-
+    
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
@@ -69,6 +70,11 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.require(:category).permit(:name, :desc)
+      params.require(:category).permit(:name)
     end
+    def categories
+       Category.all.map { |c| [ c.name, c.id ] }
+    end
+
+    
 end

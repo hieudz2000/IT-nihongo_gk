@@ -1,4 +1,3 @@
 class Category < ApplicationRecord
-    has_many :food
-    
+    has_many :foods
 end
