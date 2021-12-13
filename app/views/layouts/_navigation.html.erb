@@ -49,8 +49,11 @@
           <div class="btn-group dropstart float-right mx-5">
               <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <% if current_user.avatar.present? %>
-                  <%= image_tag(current_user.avatar, :size => "50x50") %>
-                <% end %> <br>
+                  <%= image_tag(current_user.avatar, :size => "50x50", class:"img-avatar-default") %>
+                <br>
+                <%else%>
+                <%= image_tag("hieu.png", :alt => "rss feed",:size => "50x50", class:"img-avatar-default") %>
+ <% end %>
               </div>
               <ul class="dropdown-menu">
                 <li class="nav-item">
